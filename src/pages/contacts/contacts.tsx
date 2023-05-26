@@ -72,7 +72,8 @@ export function ContactsHome() {
         setInfoUser(response.data);
       })
       .catch((response) => {
-        console.log(response);
+        localStorage.removeItem("@token_user");
+        navigate("/");
       });
   }
 
